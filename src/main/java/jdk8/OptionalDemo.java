@@ -25,6 +25,13 @@ public class OptionalDemo {
         Student result = Optional.ofNullable(a).orElse(student);
         Optional<Student> optional = Optional.ofNullable(a);
         System.out.println("optional.isPresent():" + optional.isPresent());
-        System.out.println("optional.get(" + optional.get());
+
+        //NoSuchElementException
+//        System.out.println("optional.get(" + optional.get());
+
+        //结合lambda
+        //map中的参数Function<T, R>实现   T-R
+        Integer orElse = Optional.ofNullable(a).map(Student::getAge).orElse(45);
+        System.out.println(orElse);
     }
 }
