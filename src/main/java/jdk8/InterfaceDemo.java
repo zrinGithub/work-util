@@ -8,14 +8,17 @@ package jdk8;
  * }
  */
 
-interface A{
-    default void eat(){
+interface A {
+    default void eat() {
         System.out.println("A.eat()");
     }
-    static void sleep(){
+
+    static void sleep() {
         System.out.println("A.sleep()");
     }
+
     void run();
+
     void seek();
 }
 

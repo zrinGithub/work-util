@@ -12,6 +12,7 @@
         <java.version>13</java.version>
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
+        <aspectj.version>1.9.1</aspectj.version>
     </properties>
 
     <dependencies>
@@ -34,6 +35,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
         </dependency>
     </dependencies>
 

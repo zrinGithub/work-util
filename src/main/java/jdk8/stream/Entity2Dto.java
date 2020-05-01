@@ -50,9 +50,9 @@ public class Entity2Dto {
                 new User(3, "jerry", "123456"));
         List<UserDto> userList = users.stream().map(user ->
 //                new UserDto(user.getId(), user.getName(), Base64.getEncoder().encodeToString(user.getPassWd().getBytes()))
-        {
-            return new UserDto(user.getId(), user.getName(), Base64.getEncoder().encodeToString(user.getPassWd().getBytes()));
-        }
+                {
+                    return new UserDto(user.getId(), user.getName(), Base64.getEncoder().encodeToString(user.getPassWd().getBytes()));
+                }
         ).collect(Collectors.toList());
         System.out.println(userList);
     }
