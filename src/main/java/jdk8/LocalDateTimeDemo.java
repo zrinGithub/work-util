@@ -1,5 +1,6 @@
 package jdk8;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -21,6 +22,11 @@ public class LocalDateTimeDemo {
 
         LocalDateTime parse = LocalDateTime.parse(formatDate, formatter);
         System.out.println(parse);
+
+        LocalDateTime minusDays = now.minusDays(11);
+        System.out.println(now);
+        System.out.println(minusDays);
+        System.out.println(Duration.between(minusDays, now).toDays());
 
     }
 }
