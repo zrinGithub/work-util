@@ -32,7 +32,7 @@ public class Recv {
 
             //accept only one unack-ed message at a time
             //param is prefetch
-            channel.basicQos(1);
+            channel.basicQos(2);
 
             //prepare the callback: when get message, print on the console
             DeliverCallback deliverCallback = (consumerTag, message) -> {

@@ -3,6 +3,7 @@ package rabbitmq.workqueue;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.MessageProperties;
 import org.apache.commons.lang3.RandomStringUtils;
 
 /**
@@ -26,6 +27,7 @@ public class Send {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
             String msg = "Hello World!\t" + RandomStringUtils.randomAlphabetic(10);
             channel.basicPublish("", QUEUE_NAME, null, msg.getBytes());
+//            channel.basicPublish("", QUEUE_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, msg.getBytes());
             System.out.println("Send : " + msg);
         } catch (Exception e) {
             e.printStackTrace();
